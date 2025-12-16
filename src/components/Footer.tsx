@@ -10,7 +10,7 @@ export const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="font-mono font-bold text-primary-foreground text-sm">TS</span>
+              <span className="font-mono font-bold text-primary-foreground text-sm">SG</span>
             </div>
             <span className="font-display font-semibold">
               <span className="text-foreground">Sayali</span>
