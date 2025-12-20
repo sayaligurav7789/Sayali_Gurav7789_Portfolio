@@ -20,9 +20,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground flex items-center gap-1">
-            Sayali Gurav. Crafted with passion and precision.
-            <Heart className="w-4 h-4 text-destructive fill-destructive" />
-            © {currentYear}
+            © {currentYear} Sayali Gurav - Building ideas into reality.
           </p>
 
           {/* Back to top */}
