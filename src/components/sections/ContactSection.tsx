@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'sayligurab7789@gmail.com', href: 'mailto:ayligurab7789@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'India', href: '#' },
-  { icon: Phone, label: 'Phone', value: '+91 9309072166', href: 'ayligurab7789@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 9309072166', href: 'tel:+919309072166' },
 ];
 
 const socialLinks = [
@@ -24,16 +24,35 @@ export const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message || "Something went wrong");
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+
+      setFormData({ name: '', email: '', message: '' });
+
+    } catch (error: any) {
+      toast({
+        title: "Failed to send",
+        description: error.message || "Server error",
+        variant: "destructive"
+      });
+    }
+
     setIsSubmitting(false);
   };
 
@@ -43,7 +62,7 @@ export const ContactSection = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          {/* Section Header */}
+          
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-4">
               <Mail className="w-4 h-4 text-primary" />
@@ -58,16 +77,15 @@ export const ContactSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Contact Info */}
+            
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
                 <p className="text-muted-foreground mb-8">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                  I'm always open to discussing new projects, creative ideas, or opportunities.
                 </p>
               </div>
 
-              {/* Contact Details */}
               <div className="space-y-4">
                 {contactInfo.map((info) => (
                   <a
@@ -86,7 +104,6 @@ export const ContactSection = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <p className="text-sm text-muted-foreground mb-4">Follow me on</p>
                 <div className="flex gap-4">
@@ -104,13 +121,10 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="glass rounded-2xl p-8 border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
                   <input
                     type="text"
                     id="name"
@@ -123,9 +137,7 @@ export const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
                   <input
                     type="email"
                     id="email"
@@ -138,9 +150,7 @@ export const ContactSection = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                   <textarea
                     id="message"
                     value={formData.message}
@@ -152,13 +162,7 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  variant="glow" 
-                  size="lg" 
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" variant="glow" size="lg" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <span className="w-4 h-4 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
@@ -173,6 +177,7 @@ export const ContactSection = () => {
                 </Button>
               </form>
             </div>
+
           </div>
         </div>
       </div>
