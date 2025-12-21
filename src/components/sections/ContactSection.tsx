@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'sayligurab7789@gmail.com', href: 'mailto:ayligurab7789@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'sayligurab7789@gmail.com', href: 'mailto:sayligurab7789@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'India', href: '#' },
   { icon: Phone, label: 'Phone', value: '+91 9309072166', href: 'tel:+919309072166' },
 ];
@@ -25,8 +25,10 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
+
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch(`${backendURL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
