@@ -6,24 +6,41 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+/* CORS – allow your frontend */
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://sayali-gurav7789-portfolio.vercel.app",
+    ],
+    methods: ["POST"],
+  })
+);
+
+
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    let transporter = nodemailer.createTransport({
-      service: "gmail",
+    /* Gmail SMTP (Render-safe) */
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: process.env.EMAIL_PASS, // 16-digit App Password
       },
     });
 
+    /* Gmail requires authenticated FROM */
     await transporter.sendMail({
-      from: email,
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `New Contact Message from ${name}`,
       text: message,
       html: `
@@ -34,13 +51,21 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
 
-    res.json({ success: true, message: "Email sent successfully!" });
+    res.status(200).json({
+      success: true,
+      message: "Email sent successfully!",
+    });
   } catch (err) {
-    console.error("Error sending email:", err);
-    res.status(500).json({ success: false, message: "Email failed to send." });
+    console.error("Email sending error:", err);
+    res.status(500).json({
+      success: false,
+      message: "Email failed to send.",
+    });
   }
 });
 
-app.listen(5000, () => {
-  console.log("Backend server running on http://localhost:5000");
+/* Render dynamic port */
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Backend server running on port ${PORT}`);
 });
