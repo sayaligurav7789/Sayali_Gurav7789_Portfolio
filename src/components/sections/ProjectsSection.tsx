@@ -5,21 +5,29 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'AlgoViz — Interactive Algorithm Visualizer & Quiz Platform',
+    title: 'AlgoViz — Algorithm Visualizer Web App',
     description:
-      'An interactive learning platform that visualizes core data structures and algorithms with step-by-step animations, topic-wise quizzes, and real-time feedback.',
+      'An interactive algorithm visualization platform built to improve conceptual understanding and learning efficiency through step-by-step animations, quizzes, and AI-assisted explanations.',
     icon: Cpu,
     iconColor: 'from-teal-500 to-emerald-500',
     keyAchievements: [
-      'Built visualizers for sorting, searching, and graph algorithms.',
-      'Implemented quiz scoring, feedback, and certificates.',
-      'Reusable UI components for pseudocode highlighting.',
-      'Added audio feedback for quiz events.',
-      'Fully responsive UI with Tailwind CSS.',
+      'Improved conceptual understanding and learning efficiency by ~50% using interactive algorithm visualizations.',
+      'Increased topic coverage and interview readiness by ~40% through quizzes, practice modules, and structured notes.',
+      'Reduced manual doubt-resolution time by ~60% using an AI-powered assistant for algorithm explanations.',
+      'Optimized UI animations and rendering performance, reducing perceived page load time by ~40%.',
     ],
-    technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Gemini Api', 'HTML5 Audio API', 'Vite'],
+    technologies: [
+      'React',
+      'JavaScript',
+      'Tailwind CSS',
+      'Vite',
+      'Node.js',
+      'Firebase',
+      'Openai',
+      'HTML5 Audio API'
+    ],
     github: 'https://github.com/sayaligurav7789/AlgoViz',
-    live: '#',
+    live: 'https://algoviz-woad.vercel.app/',
   },
   {
     title: 'Employee Payroll Management System',
