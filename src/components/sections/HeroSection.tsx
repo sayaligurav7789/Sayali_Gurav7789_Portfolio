@@ -60,8 +60,8 @@ export const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <Button variant="glow" size="xl" asChild>
               <a
-                href="/Sayali_Gurav_Resume.pdf"
-                download="/Sayali_Gurav_Resume.pdf"
+                href="/public/Sayali_Gurav_Resume.pdf"
+                download="public/Sayali_Gurav_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
