@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Volume2, VolumeX, Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
 import { useSound } from '@/hooks/useSound';
-import myPhoto from "@/assets/myself.jpg";
+import myPhoto from "@/assets/myself_photo.jpg";
 
 
 const navLinks = [
