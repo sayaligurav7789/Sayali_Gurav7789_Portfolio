@@ -5,71 +5,106 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
+    title: 'Neural Torrent (PBTS) — Decentralized AI Dataset Exchange',
+    description:
+      'A hybrid Web2 + Web3 decentralized platform for AI dataset sharing using blockchain reputation, WebTorrent networking, and tokenized marketplace integration.',
+    icon: ShieldCheck,
+    iconColor: 'from-cyan-500 to-blue-600',
+    keyAchievements: [
+      'Built a Persistent BitTorrent Tracker System (PBTS) with blockchain-based reputation and decentralized dataset exchange.',
+      'Integrated Ethereum smart contracts, MetaMask authentication, and Uniswap-powered token marketplace.',
+      'Implemented cryptographic receipt verification and contribution-based access control for trusted peer-to-peer sharing.',
+      'Designed AI-agent collaboration and spatial-world visualization modules for autonomous dataset interaction.',
+    ],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express.js',
+      'Solidity',
+      'Ethereum',
+      'WebTorrent',
+      'MetaMask',
+      'Uniswap API',
+      'Tailwind CSS'
+    ],
+    github: 'https://github.com/sayaligurav7789/neutral-torrent.git',
+    live: '#',
+  },
+
+  {
+    title: 'Socratic — AI-Based Learning Evaluation System',
+    description:
+      'An AI-powered Socratic learning platform where users teach an AI student to improve concept retention and detect misconceptions.',
+    icon: Cpu,
+    iconColor: 'from-purple-500 to-indigo-600',
+    keyAchievements: [
+      'Built an AI-powered Socratic learning system where users teach an AI student, improving concept retention and reducing passive learning by ~50%.',
+      'Developed a real-time misconception detection engine with blind-spot tracking and instant alerts, reducing conceptual errors by ~60%.',
+      'Designed a metadata-driven evaluation pipeline with Bloom-level analysis and dual-layer radar visualization for theoretical and practical understanding.',
+      'Integrated source-authenticated corrections, AI-generated evaluation reports, and anti copy-paste detection to ensure reliable and genuine learning experiences.',
+    ],
+    technologies: [
+      'Next.js',
+      'Node.js',
+      'MongoDB',
+      'Groq',
+      'Gemini API',
+      'Clerk',
+      'Tailwind CSS'
+    ],
+    github: 'https://github.com/sayaligurav7789',
+    live: '#',
+  },
+
+  {
+    title: 'Blackhole — AI-Powered Exam Proctoring System',
+    description:
+      'Edge-based AI exam monitoring system for secure online and offline examinations using computer vision and real-time alerts.',
+    icon: ShieldCheck,
+    iconColor: 'from-red-500 to-orange-600',
+    keyAchievements: [
+      'Built real-time AI-based proctoring using YOLO and OpenCV.',
+      'Reduced manual supervision effort by 60–70% using automated detection.',
+      'Implemented Telegram alerts with image proof and Firebase logging.',
+      'Optimized edge inference on Raspberry Pi using NCNN and frame-skipping.',
+    ],
+    technologies: [
+      'Python',
+      'OpenCV',
+      'YOLO',
+      'Firebase',
+      'Raspberry Pi',
+      'TensorFlow',
+      'Telegram API'
+    ],
+    github: 'https://github.com/sayaligurav7789/Startup',
+    live: '#',
+  },
+
+  {
     title: 'AlgoViz — Algorithm Visualizer Web App',
     description:
-      'An interactive algorithm visualization platform built to improve conceptual understanding and learning efficiency through step-by-step animations, quizzes, and AI-assisted explanations.',
-    icon: Cpu,
-    iconColor: 'from-teal-500 to-emerald-500',
+      'Interactive algorithm visualization platform for improving DSA learning using animations, quizzes, and AI-assisted explanations.',
+    icon: PenTool,
+    iconColor: 'from-teal-500 to-emerald-600',
     keyAchievements: [
-      'Improved conceptual understanding and learning efficiency by ~50% using interactive algorithm visualizations.',
-      'Increased topic coverage and interview readiness by ~40% through quizzes, practice modules, and structured notes.',
-      'Reduced manual doubt-resolution time by ~60% using an AI-powered assistant for algorithm explanations.',
-      'Optimized UI animations and rendering performance, reducing perceived page load time by ~40%.',
+      'Built 20+ interactive visualization modules for algorithms and data structures.',
+      'Improved interview readiness through quizzes, notes, and practice modules.',
+      'Reduced doubt-resolution time using AI-powered algorithm explanations.',
+      'Optimized animations and rendering performance for smoother learning experience.',
     ],
     technologies: [
       'React',
       'JavaScript',
       'Tailwind CSS',
       'Vite',
-      'Node.js',
       'Firebase',
-      'Openai',
-      'HTML5 Audio API'
+      'Node.js',
+      'OpenAI'
     ],
     github: 'https://github.com/sayaligurav7789/AlgoViz',
     live: 'https://algoviz-woad.vercel.app/',
-  },
-  {
-    title: 'Employee Payroll Management System',
-    description: 'Automates salary computations, attendance, records, and payslip generation.',
-    icon: Briefcase,
-    iconColor: 'from-teal-500 to-emerald-600',
-    keyAchievements: [
-      'Java Swing + MySQL based system.',
-      'Reduced payroll errors by 90%.',
-      'Tax, attendance & payslip automation.',
-    ],
-    technologies: ['Java', 'Swing', 'AWT', 'MySQL'],
-    github: 'https://github.com/sayaligurav7789/Emp_Payroll.git',
-    live: '#',
-  },
-  {
-    title: 'AI-Based Exam Cheating Detection System',
-    description: 'AI proctoring detecting cheating using vision & behavioral monitoring.',
-    icon: ShieldCheck,
-    iconColor: 'from-red-500 to-orange-600',
-    keyAchievements: [
-      'Face recognition & gaze tracking.',
-      'YOLOv8 + TensorFlow based detection.',
-      'Achieved 89% real-time accuracy.',
-    ],
-    technologies: ['Python', 'OpenCV', 'TensorFlow', 'YOLOv8', 'Ultralytics'],
-    github: 'https://github.com/sayaligurav7789/Startup',
-    live: '#',
-  },
-  {
-    title: 'Air Canvas – Gesture-Based Drawing System',
-    description: 'Draw in the air using webcam gesture recognition.',
-    icon: PenTool,
-    iconColor: 'from-purple-500 to-indigo-600',
-    keyAchievements: [
-      'Real-time gesture detection with MediaPipe.',
-      'Optimized tracking with Deque structures.',
-      '50% improved drawing speed.',
-    ],
-    technologies: ['Python', 'OpenCV', 'NumPy', 'MediaPipe'],
-    github: 'https://github.com/sayaligurav7789/Air-Canvas-OpenCV-Project-.git',
-    live: '#',
   },
 ];
 
