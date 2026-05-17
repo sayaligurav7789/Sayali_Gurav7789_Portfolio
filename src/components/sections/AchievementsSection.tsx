@@ -6,8 +6,45 @@ import { Button } from '../ui/button';
 export const AchievementsSection: React.FC = () => {
   const achievements = [
     {
+      title: "IEEE Research Publication & Conference Presenter – ICBDSS 2025",
+      description:
+        "Co-authored and presented EduChainSentinel: A Blockchain-Integrated Real-Time Sentiment Analysis and Exam Proctoring System at the 4th IEEE International Conference on Blockchain & Distributed Systems Security (ICBDSS 2025). Copyright filed and patent process initiated.",
+      icon: FileBadge,
+      gradient: "from-blue-600 to-cyan-500",
+      bgGradient: "from-blue-600/10 to-cyan-500/10",
+      stats: "IEEE ICBDSS 2025",
+      link: "https://drive.google.com/file/d/1kdIwF9R4hAGE1OFbYrh7mYzY1aVXP-0-/view?usp=sharing",
+      type: "Research Publication"
+    },
+
+    {
+      title: "Startup Incubation Selection – DAIIEF Kolhapur",
+      description:
+        "Selected by the Section-8 incubation foundation for developing an AI-powered EdTech innovation showcasing entrepreneurial and technical potential.",
+      icon: Rocket,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-500/10 to-emerald-600/10",
+      stats: "Incubated Startup",
+      link: "https://drive.google.com/file/d/1vn1coZEOaDKqJiWjD5ffY4qJ-9hFqCr_/view?usp=sharing",
+      type: "Startup"
+    },
+
+    {
+      title: "Special Achievement Award – DYPCET Kolhapur",
+      description:
+        "Honored with a Special Achievement Momento Award for outstanding contributions in innovation, research, and technical activities.",
+      icon: Medal,
+      gradient: "from-yellow-500 to-amber-600",
+      bgGradient: "from-yellow-500/10 to-amber-600/10",
+      stats: "Special Recognition",
+      link: "",
+      type: "Achievement"
+    },
+
+    {
       title: "2nd Place – National-Level Ideathon 2025",
-      description: "Recognized for presenting an innovative solution at Arjun Innovations Foundation (DYPCET).",
+      description:
+        "Secured 2nd rank for presenting an innovative AI-driven solution at Arjun Innovations Foundation (DYPCET).",
       icon: GraduationCap,
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-500/10 to-indigo-600/10",
@@ -15,9 +52,11 @@ export const AchievementsSection: React.FC = () => {
       link: "https://drive.google.com/file/d/1vn1coZEOaDKqJiWjD5ffY4qJ-9hFqCr_/view?usp=sharing",
       type: "Innovation"
     },
+
     {
       title: "3rd Place – National-Level Innovation Idea Presentation 2025",
-      description: "Awarded for conceptualizing and pitching a creative idea at SIT Yadrav.",
+      description:
+        "Recognized for conceptualizing and pitching a high-impact technology solution at SIT Yadrav.",
       icon: Lightbulb,
       gradient: "from-purple-500 to-fuchsia-600",
       bgGradient: "from-purple-500/10 to-fuchsia-600/10",
@@ -25,9 +64,11 @@ export const AchievementsSection: React.FC = () => {
       link: "https://drive.google.com/file/d/1J6gsQv4J8bq0AXP5tKcmPaZJ14d33ORL/view?usp=sharing",
       type: "Innovation"
     },
+
     {
       title: "Runner-up – Avishkar Research Competition",
-      description: "Represented at the university level after placing runner-up in the District competition.",
+      description:
+        "Advanced to university-level representation after securing runner-up position at the district-level research competition.",
       icon: Microscope,
       gradient: "from-red-500 to-rose-600",
       bgGradient: "from-red-500/10 to-rose-600/10",
@@ -35,41 +76,19 @@ export const AchievementsSection: React.FC = () => {
       link: "https://drive.google.com/file/d/1U8ivR0A9NMryspkIlVewztp55XYnZWIF/view?usp=sharing",
       type: "Research"
     },
-    {
-      title: "Startup Incubation – DAIIEF Kolhapur",
-      description: "Selected for incubation for an EdTech solution showcasing entrepreneurial potential.",
-      icon: Rocket,
-      gradient: "from-green-500 to-emerald-600",
-      bgGradient: "from-green-500/10 to-emerald-600/10",
-      stats: "Incubated",
-      link: "https://drive.google.com/file/d/1vn1coZEOaDKqJiWjD5ffY4qJ-9hFqCr_/view?usp=sharing",
-      type: "Startup"
-    },
 
     {
-      title: "LeetCode Scoring",
-      description: "Solved 260+ algorithmic problems across Easy, Medium, and Hard levels with a strong focus on consistency and core data structures.",
+      title: "LeetCode Problem Solving",
+      description:
+        "Solved 260+ DSA and algorithmic problems across Easy, Medium, and Hard levels with strong consistency in problem-solving.",
       icon: Code,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500/10 to-red-600/10",
       stats: "260+ Problems",
       link: "https://leetcode.com/u/SayaliGurav/",
-      type: "competitive"
-    },
-    {
-      title: "Co-Author & Presenter – IEEE ICBDSS 2025",
-      description:
-        "Co-authored and presented the research paper *EduChainSentinel: A Blockchain-Integrated Real-Time Sentiment Analysis and Exam Proctoring System*. Successfully showcased at the 4th IEEE International Conference on Blockchain & Distributed Systems Security (IEEE ICBDSS 2025). Copyright filed and patent process initiated.",
-      icon: FileBadge,
-      gradient: "from-blue-600 to-cyan-500",
-      bgGradient: "from-blue-600/10 to-cyan-500/10",
-      stats: "Conference: IEEE ICBDSS 2025",
-      link: "https://drive.google.com/file/d/1kdIwF9R4hAGE1OFbYrh7mYzY1aVXP-0-/view?usp=sharing",
-      type: "Research Publication"
-    },
-
+      type: "Competitive Programming"
+    }
   ];
-
 
  const certifications = [
   {
