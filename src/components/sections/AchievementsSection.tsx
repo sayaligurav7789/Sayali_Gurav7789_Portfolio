@@ -80,11 +80,11 @@ export const AchievementsSection: React.FC = () => {
     {
       title: "LeetCode Problem Solving",
       description:
-        "Solved 260+ DSA and algorithmic problems across Easy, Medium, and Hard levels with strong consistency in problem-solving.",
+        "Solved 400+ DSA and algorithmic problems across Easy, Medium, and Hard levels with strong consistency in problem-solving.",
       icon: Code,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500/10 to-red-600/10",
-      stats: "260+ Problems",
+      stats: "400+ Problems",
       link: "https://leetcode.com/u/SayaliGurav/",
       type: "Competitive Programming"
     }
