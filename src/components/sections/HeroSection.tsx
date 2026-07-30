@@ -80,7 +80,7 @@ export const HeroSection = () => {
           <div className="flex items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.5s' }}>
             {[
               { icon: Github, href: 'https://github.com/sayaligurav7789', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://www.linkedin.com/in/sayali-gurav-9a3a302a5', label: 'LinkedIn' },
+              { icon: Linkedin, href: 'http://www.linkedin.com/in/sayali-gurav27', label: 'LinkedIn' },
               { icon: Mail, href: 'mailto:sayligurab7789@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
               <a

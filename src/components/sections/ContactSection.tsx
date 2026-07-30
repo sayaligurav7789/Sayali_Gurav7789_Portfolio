@@ -13,7 +13,7 @@ const contactInfo = [
 
 const socialLinks = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/sayaligurav7789' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/sayali-gurav-9a3a302a5' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'http://www.linkedin.com/in/sayali-gurav27' },
   { icon: Mail, label: 'Email', href: 'mailto:sayligurab7789@gmail.com' },
 ];
 
